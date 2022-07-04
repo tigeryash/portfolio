@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>
+      Flexbox Practice
+    </title>
+
+    <style>
+      p{
+        margin-top: 0;
+        margin-bottom: 0;
+        font-family: Arial, Helvetica, sans-serif;
+      }
+
+      .a{
+        display: flex;
+        flex-direction: row;
+      }
+
+      .blue{
+        background-color: lightblue;
+      }
+
+      .pink{
+        background-color: lightpink;
+      }
+
+      .a1{
+        width: 200px;
+      }
+
+      .a2{
+        width: 75px;
+      }
+
+      .b1{
+        width: 50px;
+      }
+
+      .b2{
+        flex: 1;
+      }
+
+      .c{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+      }
+
+      .d{
+        height: 50px;
+        border-width: 1px;
+        border-color: gray;
+        border-style: solid;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+      }
+
+      .e{
+        margin-top: 30px;
+        border-width: 1px;
+        border-style: solid;
+        width: 300px;
+        border-radius: 10px;
+      }
+
+      .row{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        padding-left: 10px;
+        padding-right: 10px;
+      }
+
+      .cat{
+        font-size: 15px;
+        font-family: Arial, Helvetica, sans-serif;
+      }
+
+      .button{
+        background-color: blue;
+        border: none;
+        color: white;
+        padding-left: 10px;
+        padding-right: 10px;
+        padding-top: 3px;
+        padding-bottom: 3px;
+        border-radius: 20px;
+        font-size: 15px;
+        font-weight: bold;
+      }
+
+      .row1{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        margin-bottom: 20px;
+      }
+      
+      .pfp{
+        width: 50px;
+        height: 50px;
+        object-fit: cover;
+        border-radius: 40px;
+        margin-right: 15px;
+      }
+
+      .mid{
+        width: 200px;
+      }
+
+      .name{
+        font-size: 16px;
+        font-weight: bold;
+      }
+
+      .follow{
+        background-color: blue;
+        border: none;
+        color: white;
+        border-radius: 5px;
+        padding: 10px;
+        font-weight: bold;
+        font-size: 16px;
+      }
+
+      .f{
+        margin-top: 30px;
+      }
+
+      .g{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        height: 50px;
+        background-color: purple;
+        align-items: center;
+      }
+
+      .leftf{
+        color: white;
+        margin-left: 30px;
+        font-weight: bold;
+        font-family: Arial, Helvetica, sans-serif;
+      }
+
+   
+      .search{
+        border: none;
+        border-radius: 20px;
+        padding-left: 16px;
+        padding-right: 16px;
+        padding-top: 8px;
+        padding-bottom: 8px;
+        width: 500px;
+      }
+
+      .download{
+        border-width: 1px;
+        border-color: white;
+        border-style: solid;
+        background-color: transparent;
+        color: white;
+        border-radius: 2px;
+        margin-right: 30px;
+        padding-top: 8px;
+        padding-bottom: 8px;
+        padding-left: 15px;
+        padding-right: 15px;
+      }
+    </style>
+  </head>
+  <body>
+
+    <div class="a">
+      <div class="blue a1">
+        200px
+      </div>
+      <div class="pink a2">
+        75px
+      </div>
+    </div>
+
+    <div class="a">
+      <div class="blue b1">
+        item1
+      </div>
+      <div class="pink b2">
+        item2
+      </div>
+      <div class="blue a2">
+        item3
+      </div>
+    </div>
+
+    
+    <div class="c">
+      <div class="blue">
+        item1
+      </div>
+      <div class="blue">
+        item2
+      </div>
+      <div class="blue">
+        item3
+      </div>
+      <div class="blue">
+        item4
+      </div>
+    </div>
+
+    <div class="d">
+      <div class="blue">
+        item1
+      </div>
+      <div class="blue">
+        item2
+      </div>
+    </div>
+
+    <div class="e">
+      <div class="row">
+        <p class="cat">
+          Home
+        </p>
+        <button class="button">14</button>
+      </div>
+      <div class="row">
+        <p class="cat">
+          Notifications
+        </p>
+        <button class="button">3</button>
+      </div>
+      <div class="row">
+        <p class="cat">
+          Messages
+        </p>
+        <button class="button">5</button>
+      </div>
+    </div>
+
+    <div class="f">
+     <div class="row1">   
+       <img class="pfp" src="/thumbnails/istockphoto-1297349747-170667a.jpg">
+       <div class="mid">
+        <p class="name">
+           Oliver
+        </p>
+         <p class="gray">
+           the cat
+         </p>
+         <p class="gray">
+          Popular
+        </p>
+      </div>
+      <button class="follow">
+         follow
+      </button>
+     </div>
+     <div class="row1">   
+      <img class="pfp" src="/thumbnails/istockphoto-1297349747-170667a.jpg">
+      <div class="mid">
+        <p class="name">
+          Oliver
+        </p>
+        <p class="gray">
+          the cat
+        </p>
+        <p class="gray">
+          Popular
+        </p>
+      </div>
+      <button class="follow">
+        follow
+      </button>
+    </div>
+    <div class="row1">   
+       <img class="pfp" src="/thumbnails/istockphoto-1297349747-170667a.jpg">
+        <div class="mid">
+          <p class="name">
+            Oliver
+          </p>
+          <p class="gray">
+            the cat
+          </p>
+          <p class="gray">
+            Popular
+          </p>
+        </div>
+        <button class="follow">
+          follow
+        </button>
+      </div>
+      </div>
+
+      <div class="g">
+        <div class="leftf">
+          Home
+        </div>
+        <div class="midf">
+          <input class="search" type="search" placeholder="search">
+        </div>
+        <div class="rightf">
+          <button class="download">Download</button>
+        </div>
+      </div>
+
+  </body>
+</html>

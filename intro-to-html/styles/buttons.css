@@ -1,0 +1,192 @@
+.uber{
+  color:white;
+  background-color: black;
+  width: 150px;
+  height: 50px;
+  border:none;
+  cursor: pointer;
+  font-size: 17px;
+  transition: opacity .15s;
+}
+
+.uber:hover{
+  opacity: .8;
+}
+
+.amazon{
+  color:black;
+  background-color: rgb(255, 216, 20);
+  border: none;
+  width: 200px;
+  height: 40px;
+  border-radius: 20px;
+  font-size: 19px;
+  cursor: pointer;
+  transition: background-color .15s;
+}
+
+.amazon:hover{
+  background-color: rgb(141, 141, 25);
+}
+
+.github{
+  color:white;
+  background-color: rgb(46, 164, 79);
+  border: none;
+  width: 120px;
+  height: 52px;
+  font-weight: bold;
+  font-size:20px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: box-shadow .15s;
+}
+
+.github:hover{
+  box-shadow: 5px 0px 10px rgba(0,0,0,.15);
+}
+
+.bootstrap-start{
+  color:rgb(255, 255, 255);
+  background-color: rgb(121, 82, 179);
+  width: 120px;
+  height: 43px;
+  border-radius: 4px;
+  font-weight: bold;
+  font-size: 15px;
+  border: none;
+  cursor: pointer;
+  transition: background-color .15s;
+}
+
+.bootstrap-start:hover{
+  background-color: rgb(75, 15, 75);
+}
+
+.bootstrap-download{
+  color:rgb(108, 117, 125);
+  background-color: rgb(255, 255, 255);
+  width: 120px;
+  height: 43px;
+  border-radius: 4px;
+  border-width: 1px;
+  border-color: rgb(108, 117, 125);
+  margin-left: 5px;
+  font-weight: bold;
+  font-size: 15px;
+  cursor: pointer;
+  transition: background-color .15s, color .15s;
+}
+
+.bootstrap-download:hover{
+  background-color: rgb(108, 117, 125);
+  color: white;
+}
+
+.linkedin-apply{
+  color:white;
+  background-color: rgb(10, 102, 194);
+  width: 300px;
+  height: 50px;
+  border-radius: 25px;
+  font-weight: bold;
+  font-size: 19px;
+  border: none;
+  cursor: pointer;
+  transition: background-color .15s;
+}
+
+.linkedin-apply:hover{
+  background-color: rgb(11, 43, 75);
+}
+
+.linkedin-save{
+  color:rgb(10, 102, 194);
+  background-color: rgb(255, 255, 255);
+  width: 100px;
+  height: 50px;
+  border-radius: 25px;
+  border-width: 1px;
+  border-color: rgb(10, 102, 194);
+  border-style: solid;
+  margin-left: 13px;
+  font-weight: bold;
+  font-size: 19px;
+  cursor: pointer;
+  transition: background-color .15s, border-width .1s;
+}
+
+.linkedin-save:hover{
+  background-color: rgba(10, 102, 194, .15);
+  border-width: 3px;
+}
+
+.pagination{
+  padding-top: 8px;
+  padding-bottom: 8px;
+  font-weight: bold;
+  margin-left: 8px;
+}
+
+.page{
+  padding-top: 8px;
+  padding-bottom: 8px;
+  font-weight: bold;
+  margin-left: 8px;
+}
+
+.stretch{
+  background-color: green;
+  color:white;
+  border: none;
+  padding-top: 8px;
+  padding-left: 12px;
+  padding-right:12px;
+  padding-bottom: 8px;
+  transition: padding-top .4s, padding-bottom .4s, padding-left .4s, padding-right .4s;
+}
+
+.stretch:hover{
+  padding-top: 32px;
+  padding-left: 48px;
+  padding-right:48px;
+  padding-bottom: 32px;
+}
+
+.shadow{
+  background-color: green;
+  color:white;
+  border: none;
+  padding-top: 8px;
+  padding-left: 12px;
+  padding-right:12px;
+  padding-bottom: 8px;
+  cursor: pointer;
+  box-shadow: 5px 5px 2px rgba(0,0,0,.15);
+}
+
+.shadow:active{
+  margin-top: 2px;
+  margin-left: 2px;
+  box-shadow: none;
+}
+
+.mj{
+  background-color: green;
+  color:white;
+  border: none;
+  padding-top: 8px;
+  padding-left: 12px;
+  padding-right:12px;
+  padding-bottom: 8px;
+  margin-left: 8px;
+  margin-right: 8px;
+  transition: padding-left .15s,padding-right .15s,margin-left .15s, margin-right .15s;
+}
+
+.mj:hover{
+  padding-left: 20px;
+  padding-right: 20px;
+  margin-left: 0px;
+  margin-right: 0px;
+}

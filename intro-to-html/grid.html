@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>grid practice</title>
+    <style>
+
+      .grid1{
+        display: grid;
+        grid-template-columns: 200px 75px;
+      }
+
+      .a, .col1, .col3{
+        background-color: blue;
+      }
+
+      .b, .col2, .c1{
+        background-color: pink;
+      }
+
+      .grid2{
+        margin-top: 20px;
+        display: grid;
+        grid-template-columns: 50px 1fr 75px;
+      }
+
+      .grid3{
+        margin-top: 20px;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        column-gap: 20px;
+        row-gap: 10px;
+      }
+
+      .profile-grid{
+        margin-top: 30px;
+        display: grid;
+        grid-template-columns: 200px 200px 200px;
+        column-gap: 20px;
+      }
+
+      .profile-card{
+        box-shadow: 0px 0px 10px rgba(0,0,0,.2);
+        width: 200px;
+      }
+
+      .pfp{
+        width: 200px;
+        height: 200px;
+        object-fit: cover;
+      }
+
+      .name{
+        margin-top: 10px;
+        margin-left: 8px;
+        font-size: 20px;
+        font-weight: bold;
+        font-family: Arial, Helvetica, sans-serif;
+        margin-bottom: 0px;
+      }
+
+      .friend-stats{
+        margin-left: 8px;
+        display: grid;
+        grid-template-columns: 50px 1fr;
+        align-items: center;
+      }
+
+      .friend-pic{
+        width: 30px;
+        height: 30px;
+        border-radius: 20px;
+        object-fit: cover;
+      }
+      
+      .mutual-friends{
+        color: gray;
+        font-family: Arial, Helvetica, sans-serif;
+      }
+
+      .add{
+        border: none;
+        margin-left: 8px;
+        background-color: blue;
+        color: white;
+        border-radius: 5px;
+        padding-left: 20px;
+        padding-right: 20px;
+        padding-top: 10px;
+        padding-bottom: 10px;
+        margin-bottom: 10px;
+      }
+    </style>
+
+  </head>
+
+
+  <body>
+
+    <div class="grid1">
+      <div class="a">
+        200px
+      </div>
+      <div class="b">
+        75px
+      </div>
+    </div>
+
+    <div class="grid2">
+
+      <div class="col1">
+        col1
+      </div>
+      <div class="col2">
+        col2
+      </div>
+      <div class="col3">
+        col3
+      </div>
+
+    </div>
+
+    <div class="grid3">
+      <div class="c1">
+        col1
+      </div>
+      <div class="c1">
+        col2
+      </div>
+      <div class="c1">
+        col3
+      </div>
+      <div class="c1">
+        col4
+      </div>
+      <div class="c1">
+        col1
+      </div>
+      <div class="c1">
+        col2
+      </div>
+      <div class="c1">
+        col3
+      </div>
+      <div class="c1">
+        col4
+      </div>
+    </div>
+
+    <div class="profile-grid">
+      <div class="profile-card">
+        <img class="pfp" src="/thumbnails/istockphoto-1297349747-170667a.jpg">
+        <p class="name">
+          Oliver
+        </p>
+        
+        <div class="friend-stats">
+          <img class="friend-pic" src="/thumbnails/istockphoto-1297349747-170667a.jpg">
+          <p class="mutual-friends">
+            2 mutual fiends
+          </p>
+        </div>
+        <button class="add">Add Friend</button>
+      </div>
+
+      <div class="profile-card">
+        <img class="pfp" src="/thumbnails/istockphoto-1297349747-170667a.jpg">
+        <p class="name">
+          Oliver
+        </p>
+        
+        <div class="friend-stats">
+          <img class="friend-pic" src="/thumbnails/istockphoto-1297349747-170667a.jpg">
+          <p class="mutual-friends">
+            2 mutual fiends
+          </p>
+        </div>
+        <button class="add">Add Friend</button>
+      </div>
+
+      <div class="profile-card">
+        <img class="pfp" src="/thumbnails/istockphoto-1297349747-170667a.jpg">
+        <p class="name">
+          Oliver
+        </p>
+        
+        <div class="friend-stats">
+          <img class="friend-pic" src="/thumbnails/istockphoto-1297349747-170667a.jpg">
+          <p class="mutual-friends">
+            2 mutual fiends
+          </p>
+        </div>
+        <button class="add">Add Friend</button>
+      </div>
+    </div>
+  </body>
+</html>

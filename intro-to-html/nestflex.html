@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>
+      Nested Flexbox
+    </title>
+
+    <style>
+      .a{
+        margin-bottom: 20px;
+        display: flex;
+        height: 50px;
+      }
+      .a1{
+        background-color: lightpink;
+        width: 100px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+      .a2{
+        background-color: lightblue;
+        width: 200px;
+        }
+
+      .item1{
+        background-color: black;
+        color: white;
+      }
+
+      .b1{
+        background-color: lightpink;
+        width: 100px;
+      }
+
+      .row2{
+        display: flex;
+        justify-content: space-between;
+      }
+
+      .c{
+        border: none;
+        box-shadow: 0px 0px 8px rgba(0,0,0, .2);
+        padding: 13px;
+        width: 350px;
+        border-radius: 6px;
+      }
+
+      .inbox{
+        font-size: 16px;
+        color: gray;
+        font-family: Arial, Helvetica, sans-serif;
+      }
+
+      .wrap{
+        margin-top: 12px;
+        display: flex;
+        align-items: center;
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 12px;
+      }
+
+      .img-con{
+        width: 50px;
+      }
+      .pfp{
+        width: 40px;
+        height: 40px;
+        border-radius: 25px;
+        object-fit: cover;
+      }
+
+      .line1{
+        display: flex;
+        justify-content: space-between;
+      }
+
+      .info{
+        flex:1;
+      }
+      .topic{
+        font-weight: bold;
+        font-size: 16px;
+        font-family: Arial, Helvetica, sans-serif;
+      }
+
+      .time{
+        font-size: 12px;
+        color: gray;
+        font-family: Arial, Helvetica, sans-serif;
+      }
+
+      .sub{
+        font-size: 13px;
+        font-weight: bold;
+      }
+
+      .preview{
+        color: gray;
+      }
+
+      .f{
+        margin: 10px;
+        display: flex;
+        width: 420px;
+      }
+
+      .col1{
+        margin-right: 10px;
+      }
+
+      .pfp2{
+        height: 60px;
+        width: 60px;
+        border-radius: 30px;
+        object-fit: cover;
+      }
+
+      col2{
+        flex: 1;
+      }
+
+      .first-line{
+        display: flex;
+        margin-bottom: 5px;
+      }
+      .name{
+        font-family: Arial, Helvetica, sans-serif;
+        font-weight: bold;
+        margin-right: 5px;
+      }
+
+      .gray{
+        color: gray;
+        font-size: 15px;
+      }
+
+      .link{
+        margin-top: 15px;
+        border-width: 1px;
+        border-color: gray;
+        border-style: solid;
+        border-radius: 15px;
+        display: flex;
+        align-items: center;
+        overflow: hidden;
+      }
+
+      .box{
+        width: 100px;
+        height: 100px;
+        background-color: gray;
+        margin-right: 10px;
+      }
+
+      .content{
+        flex: 1;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="a">
+      <div class="a1">
+        <div class="item1">
+          item1
+        </div>
+      </div>
+      <div class="a2">
+  
+      </div>
+    </div>
+
+    <div class="a">
+      <div class="b1"></div>
+      <div class="a2">
+        <div>row1</div>
+        <div class="row2">
+          <div class="item1">
+            row2
+          </div>
+          <div class="item1">
+            row2
+          </div>  
+        </div>
+      </div>
+    </div>
+
+    <div class="c">
+      <div class="inbox">
+        ALL INBOXES
+      </div>
+
+      <div class="wrap">
+
+        <div class="img-con">
+          <img class="pfp" src="/thumbnails/istockphoto-1297349747-170667a.jpg">
+        </div>
+
+        <div class="info">
+          <div class="line1">
+            <div class="topic">
+              Chewy Promotions
+            </div>
+            <div class="time">
+              4:58 PM
+            </div>
+          </div>
+          <div class="sub">
+            Biggest sales of the year!
+          </div>
+          <div class="preview">
+            Hey there! We're writing to tell you about our...
+          </div>
+        </div>
+  
+      </div>
+      
+      <div class="wrap">
+
+        <div class="img-con">
+          <img class="pfp" src="/thumbnails/istockphoto-1297349747-170667a.jpg">
+        </div>
+
+        <div class="info">
+          <div class="line1">
+            <div class="topic">
+              Chewy Promotions
+            </div>
+            <div class="time">
+              4:58 PM
+            </div>
+          </div>
+          <div class="sub">
+            Biggest sales of the year!
+          </div>
+          <div class="preview">
+            Hey there! We're writing to tell you about our...
+          </div>
+        </div>
+  
+      </div>
+
+      <div class="wrap">
+
+        <div class="img-con">
+          <img class="pfp" src="/thumbnails/istockphoto-1297349747-170667a.jpg">
+        </div>
+
+        <div class="info">
+          <div class="line1">
+            <div class="topic">
+              Chewy Promotions
+            </div>
+            <div class="time">
+              4:58 PM
+            </div>
+          </div>
+          <div class="sub">
+            Biggest sales of the year!
+          </div>
+          <div class="preview">
+            Hey there! We're writing to tell you about our...
+          </div>
+        </div>
+  
+      </div>
+    </div>
+
+    <div class="f">
+      <div class="col1">
+        <img class="pfp2" src="/thumbnails/istockphoto-1297349747-170667a.jpg">
+      </div>
+      <div class="col2">
+        <div class="first-line">
+          <div class="name">
+            supersimple.dev
+          </div>
+          <div class="gray">&commat;SuperSimpleDev</div>  
+        </div>
+        <div>
+          What is backend web development? A complete overview. New video is up!
+        </div>
+        <div class="link">
+          <div class="box">
+
+          </div>
+          <div class="content">
+            <div class="gray">
+              youtube.com
+            </div>
+            <div>
+              Backend web development - a complete overview (2021)
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

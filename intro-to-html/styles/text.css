@@ -1,0 +1,137 @@
+
+  p{
+    font-family: Arial, Helvetica, sans-serif;
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+
+  .tahoma{
+    font-family: Tahoma;
+    font-weight: bold;
+  }
+
+  .b{
+    font-family: Arial;
+    font-weight: bold;
+    font-size: 20px;
+  }
+
+  .italic{
+    font-family: Arial;
+    font-style: italic;
+    color: red;
+  }
+
+  .ver{
+    font-family: Verdana;
+    font-weight: bold;
+    font-size: 18px;
+    margin-bottom: 3;
+  }
+
+  .sub{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: gray;
+  }
+
+  .para{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    width: 300px;
+    margin-top: 18px;
+    margin-bottom: 18px;
+  }
+
+  .start{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    background-color: green;
+    color: white;
+    border: none;
+    padding-top: 8px;
+    padding-bottom: 8px;
+    padding-left: 16px;
+    padding-right: 16px;
+    border-radius: 6px;
+  }
+
+  .title{
+    font-family: Roboto;
+    font-size: 30px;
+    font-weight: bold;
+    text-align: center;
+  }
+
+  .subtitle{
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+
+  .link{
+    font-family: Arial, Helvetica, sans-serif;
+    color:blue;
+    text-align: center;
+  }
+
+  .center{
+    text-align: center;
+  }
+
+  .small{
+    font-size: 15px;
+    color: orange;
+    text-align: center;
+  }
+
+  .big{
+    font-size: 25px;
+    font-weight: bold;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    text-align: center;
+  }
+
+  .super{
+    font-size: 40px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    text-align: center;
+  }
+
+  .yes-i-made-a-class-just-for-this{
+    text-align: center;
+    margin-top: 25px;
+  }
+
+  .buy{
+    background-color: blue;
+    border: none;
+    cursor: pointer;
+    color: white;
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-top: 7px;
+    padding-bottom: 7px;
+    border-radius: 30px;
+  }
+
+  .money{
+    font-size: 40;
+  
+  }
+
+  .margin{
+    margin-top: 8px;
+    margin-bottom: 8px;
+  }
+  .curr{
+    color: gray;
+  }
+
+  .green{
+    color: green;
+  }
+
+  .red{
+    color: red;
+  }

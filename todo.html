@@ -1,0 +1,445 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Yash's todo app</title>
+  </head>
+  <body>
+    <input id="todo-title" type="text"/>
+    <input id="date-picker" type="date"/>
+    <button id="todo-button" onclick="change()">To Do</button>
+    <button onclick="addTodo()">Add Todo</button>
+
+    <div id="counter">0</div>
+
+    <button id="up" onclick="increase()">up</button>
+
+    <button id="down" onclick="decrease()">down</button>
+
+    <input id="add" type="text"/>
+    <button id="divit" onclick="addToPage()">Div It!</button>
+
+    <div id="todo-list"></div>
+
+    <button id="apple" onclick="addToCart('Apple')">Apple</button>
+    <button id="tomato" onclick="addToCart('Tomato')">Tomato</button>
+    <button id="eggs" onclick="addToCart('Eggs')">Eggs</button>
+    <button id="clear" onclick="clearCart()">Clear</button>
+    <div id="cart"></div>
+    
+    <input id="measurement" type="text"/> 
+    <button onclick="convertCM()">Convert to cm</button>
+    <button onclick="convertIN()">Convert to in</button>
+
+    <div id="receipt"></div>
+
+
+    <script>
+      
+      function addToPage(){
+        let inputText = document.getElementById('add');
+        
+        let div = document.createElement('div');
+        div.innerText = inputText.value;
+        document.body.appendChild(div);
+      }
+
+
+      let count = 0;
+
+      function increase(){
+        count = count + 1;
+        updateCount();
+      }
+
+      
+      function decrease(){
+        count = count - 1;
+        updateCount();
+      }
+
+      function updateCount(){
+        let update = document.getElementById('counter');
+        update.innerText = count;
+      }
+
+      let todos = [{
+        title:'Get Groceries',
+        dueDate: '2021-10-04',
+        id: '1'
+      },{
+        title:'Wash car',
+        dueDate: '2021-02-03',
+        id: '2'
+      },{
+         title: 'Make dinner',
+         dueDate: '2021-03-04',
+         id: '3'
+        }];
+
+      function change(){
+        let x = document.getElementById('todo-button');
+        x.innerText = 'Done';
+      }
+
+      
+
+      render();
+
+      function addTodo(){
+        const textbox = document.getElementById('todo-title');
+        const title = textbox.value;
+
+        const datePicker = document.getElementById('date-picker');
+        const dueDate = datePicker.value;
+
+        const id = ''+ new Date().getTime;
+
+        todos.push({
+          title:title,
+          dueDate: dueDate,
+          id: id
+        });
+
+        render();
+      }
+
+      function func(){
+        const num1 = 1;
+        const num5 = 5;
+
+        if ( num1 > num5) {
+          console.log('run this code');
+        }else if (num > 100){
+          console.log('not run');
+        }else if (num > 0) {
+          console.log('true');
+        }else{
+          console.log('other');
+        }
+      
+      }
+      
+      function deleteTodo(event){
+        const deleteButton = event.target;
+        const idToDelete = deleteButton.id;
+
+        todos = todos.filter(function(todo){
+          if ( todo.id === idToDelete){
+            return false;
+          } else{
+            return true;
+          }
+        });
+
+        render();
+      }
+
+
+      function render(){
+        document.getElementById('todo-list').innerHTML = '';
+
+        todos.forEach(function (todo){
+          const element = document.createElement('div');
+         element.innerText = todo.title + ' ' + todo.dueDate;
+
+          const deleteButton = document.createElement('button');
+          deleteButton.innerText = 'delete';
+          deleteButton.style = 'margin-left: 12px';
+          deleteButton.onclick = deleteTodo;
+          deleteButton.id= todo.id;
+
+          element.appendChild(deleteButton);
+
+         const todoList = document.getElementById('todo-list');
+          todoList.appendChild(element);
+        });
+      
+      }
+
+      function max(array){
+        let highest = -Infinity;
+        array.filter(function(num){
+          if(num > highest){
+            highest = num;
+          };
+        });
+        return highest;
+      }
+
+      function min(array){
+        let lowest = Infinity;
+        array.filter(function(num){
+          if(num < lowest){
+            lowest = num;
+          };
+        });
+        return lowest;
+      }
+
+      function smallest(array){
+        let small = Infinity;
+        array.filter(function(num){
+          if(num < 0){
+            return;
+          }else if(num < small){
+            small = num;
+          }
+        });
+        return small;
+      }
+      const high = max([1, 5, -2, 4, 3, 5, 0]);
+
+      function pickApples(fruits){
+        let two = 2;
+        let newArray = fruits.filter(function(fruit){
+          if(two != 0){
+            if(fruit === 'apple'){
+              two -=1;
+            }else{
+                return fruit;
+              }
+            }else if(two == 0){
+              return fruit;
+            }
+          
+        });
+        return newArray;
+      }
+
+      
+      function pickApplesReverse(fruits){
+        let two = 2;
+        let newArray = fruits.reverse();
+
+       let reversed = newArray.filter(function(fruit){
+          if(two != 0){
+            if(fruit === 'apple'){
+              two -=1;
+            }else{
+                return fruit;
+              }
+            }else if(two == 0){
+              return fruit;
+            }
+          
+        });
+
+        return reversed.reverse();
+      }
+
+      function pickFruits(fruits){
+        let applesPicked = 0;
+        let orangePicked = 0;
+
+        let newArray = fruits.filter(function(fruit){
+          if(fruit === 'apple'){
+            if(applesPicked >=2){
+              return fruit;
+            }else{
+                applesPicked += 1;
+              }
+            }else if(fruit === 'orange'){
+            if(orangePicked >= 1){
+              return fruit;}
+              else{
+              orangePicked += 1;
+              }
+            }else{
+              return fruit;
+            }  
+          
+        });
+        return newArray;
+      }
+      let fruitsPicked = pickFruits(['cherry', 'apple', 'orange', 'apple', 'banana', 'apple']);
+
+
+      let apples = pickApplesReverse(['cherry', 'apple', 'orange', 'apple', 'banana', 'apple']);
+
+      let totalPrice = 0;
+
+      function createCart(foodPrices) {
+        const foods = Object.keys(foodPrices);
+
+        foods.forEach(function (food){
+          const cartItem = document.createElement('div');
+          const foodPrice = foodPrices[food];
+          cartItem.innerText = food + ' $ ' + foodPrice;
+          
+          const addButton = document.createElement('button');
+          addButton.innerText = 'Add';
+          addButton.style = 'margin-left: 12px';
+          addButton.onclick = function (){
+            totalPrice += foodPrice;
+          };
+        
+          cartItem.appendChild(addButton);
+
+          document.body.appendChild(cartItem);
+        });
+
+        
+      }
+
+      createCart({ Apple: 3, Orange: 4, Egg: 2 });
+
+
+      const cart = document.getElementById('cart');
+
+      function addToCart(food){
+        const cartItem = document.createElement('div');
+        cartItem.innerText = food;
+        cart.appendChild(cartItem);
+      }
+
+      function clearCart(){
+        cart.innerHTML = '';
+      }
+
+
+      function cartTotal(cartArray){
+        let total = 0;
+
+        cartArray.forEach(function (item){
+          total += item.price * item.quantity;
+      });
+
+      console.log(total);
+      }
+
+      function displayReceipt(cartArray){
+        receipt.innerHTML = '';
+
+        cartArray.forEach( function (item){
+          const line = document.createElement('div');
+          line.innerText = item.name + ' ' + '$'+ item.price + ' * ' + item.quantity;
+          receipt.appendChild(line);
+        });
+        
+        let total = 0;
+
+        cartArray.forEach(function (item){
+          total += item.price * item.quantity;
+        });
+
+        const totalline = document.createElement('div');
+
+        totalline.innerText = 'Cart total = $' + total;
+        receipt.appendChild(totalline);
+      }
+
+      cartTotal([
+       { name: 'Apple', price: 4, quantity: 2 },
+        { name: 'Orange', price: 3, quantity: 3 }
+      ]);
+
+      displayReceipt([
+       { name: 'Apple', price: 4, quantity: 2 },
+        { name: 'Orange', price: 3, quantity: 3 }
+      ]);
+
+      const measure = document.getElementById('measurement');
+
+      function convertCM(){
+        const val = measure.value;
+        const conversion = +val * 2.54;
+
+        const result = document.createElement('div');
+        result.innerText = conversion;
+        document.body.appendChild(result);
+      }
+
+      function convertIN(){
+        const val = measure.value;
+        const conversion = +val / 2.54;
+
+        const result = document.createElement('div');
+        result.innerText = conversion;
+        document.body.appendChild(result);
+
+      }
+
+      function aboveFreezing(temps){
+        const tempsAboveFreezing = temps.filter(function (temp){
+          return temp > 32;
+        });
+
+        return tempsAboveFreezing;
+      }
+
+      let num = aboveFreezing([40, 67, 8, 29, 100, -3, 0]);
+
+      function removeRed(foodArray){
+        return foodArray.filter(function(food){
+          return food.color !== 'red';
+        });
+      }
+      
+      let foodAndColor = removeRed([{ name: 'Apple', color: 'red' }, { name: 'Egg', color: 'white' }]);
+
+      
+      function greeting(firstName){
+        console.log('Hello '+ firstName);
+      }
+
+      greeting('Yash');
+
+      function toUpper(stringArr){
+        let upArray = [];
+
+        stringArr.forEach(function (str) {
+          upArray.push(str.toUpperCase());
+        });
+
+        console.log(upArray);
+      }
+
+      function arrayDouble(stringArr){
+        let double = [];
+
+        stringArr.forEach(function (str){
+          double.push(str);
+          double.push(str);
+        });
+
+        console.log(double);
+      }
+
+      function arraySum(numberArr){
+        let total = 0;
+
+        numberArr.forEach(function(number){
+          total = total + number;
+        });
+
+        console.log(total);
+
+      }
+      
+      function inToCm(length){
+        console.log(length*2.54);
+      }
+
+      inToCm(8);
+
+      let button = document.createElement('button');
+      button.innerText = 'Click Me';
+      document.body.appendChild(button);
+
+      let animals = ['cat', 'dog', 'tiger', 'meercat'];
+
+      toUpper(animals);
+
+      arrayDouble(animals);
+
+      arraySum([1,2,3]);
+
+      arraySum([5, -2, 7, 0]);
+
+
+      document.title = 'Yashs Todo App';
+
+    </script>
+  </body>
+
+</html>

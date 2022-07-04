@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>YouTube.com Clone</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="styles/general.css">
+    <link rel="stylesheet" href="styles/header.css">
+    <link rel="stylesheet" href="styles/video.css">
+    <link rel="stylesheet" href="styles/sidebar.css">
+  </head>
+  <body>
+    <div class="header">
+      <div class="left-section">
+        <img class="hamburger-menu" src="icons/hamburger-menu.svg">
+        <img class="youtube-logo" src="icons/youtube-logo.svg">
+      </div>
+      <div class="middle-section">
+        <input class="search-bar" type="text" placeholder="Search">
+        <button class="search-button">
+          <img class="search-icon" src="icons/search.svg">
+          <div class="tooltip">Search</div>
+        </button>
+        <button class="voice-search-button">
+          <img class="voice-search-icon" src="icons/voice-search-icon.svg">
+          <div class="tooltip">Search with you voice</div>
+        </button>
+      </div>
+      <div class="right-section">
+        <div class="upload-icon-container">
+          <img class="upload-icon" src="icons/upload.svg">
+          <div class="tooltip">Create</div>
+        </div>
+        <div class="youtube-apps-icon-container">
+          <img class="youtube-apps-icon" src="icons/youtube-apps.svg">
+          <div class="tooltip">YouTube apps</div>
+        </div>
+        <div class="notifications-icon-container">
+          <img class="notifications-icon" src="icons/notifications.svg">
+          <div class="notifications-count">3</div>
+          <div class="tooltip">Notifications</div>
+        </div>
+        <img class="current-user-picture" src="channel-pictures/user.jpg">
+      </div>
+    </div>
+
+    <div class="sidebar">
+      <div class="sidebar-link">
+        <img src="/icons/home.svg">
+        <div>Home</div>
+      </div>
+      <div class="sidebar-link">
+        <img src="/icons/explore.svg">
+        <div >Explore</div>
+      </div>
+      <div class="sidebar-link">
+        <img src="/icons/subscriptions.svg">
+        <div>Subscriptions</div>
+
+      </div>
+      <div class="sidebar-link">
+        <img src="/icons/originals.svg">
+        <div>Originals</div>
+
+      </div>
+      <div class="sidebar-link">
+        <img src="/icons/youtube-music.svg">
+        <div>YouTube Music</div>
+
+      </div>
+      <div class="sidebar-link">
+        <img src="/icons/library.svg">
+        <div>Library</div>
+
+      </div>
+    </div>
+
+    <div class="video-grid">
+      <div class="video-preview">
+        <div class="thumbnail-row">
+          <a href="https://www.youtube.com/watch?v=tJuqe6sre2I" target="_blank">
+            <img class="thumbnail" src="thumbnails/thumbnail-1.webp">
+          </a>
+          <div class="video-time">14:20</div>
+        </div>
+        <div class="video-info-grid">
+          <div class="channel-picture">
+            <img class="profile-picture" src="channel-pictures/channel-1.jpg">
+          </div>
+          <div class="video-info">
+            <a href="https://www.youtube.com/watch?v=tJuqe6sre2I" target="_blank" class="video-title-link">
+              <p class="video-title">
+                Dubai Is A Parody Of The 21st Century
+              </p>
+            </a>
+            <p class="video-author">
+              Adama Something
+            </p>
+            <p class="video-stats">
+              6.2M views &#183; 8 months ago
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="video-preview">
+        <div class="thumbnail-row">
+          <img class="thumbnail" src="thumbnails/thumbnail-2.webp">
+          <div class="video-time"></div>
+        </div>
+        <div class="video-info-grid">
+          <div class="channel-picture">
+            <a href="https://www.youtube.com/watch?v=GUW2ZO6Z06M" target="_blank">
+              <img class="profile-picture" src="channel-pictures/channel-2.jpg">
+            </a>
+          </div>
+          <div class="video-info">
+            <p class="video-title">
+              <a href="https://www.youtube.com/watch?v=GUW2ZO6Z06M" target="_blank" class="video-title-link">
+                Playing with NA's BEST | #1 Gengar | Pokemon UNITE
+            </p>
+          </a>
+            <p class="video-author">
+              Assassin Dave UNITE Live
+            </p>
+            <p class="video-stats">
+              272 watching
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="video-preview">
+        <div class="thumbnail-row">
+          <a href="https://www.youtube.com/watch?v=40yq-8uWPDc" target="_blank"></a>
+          <img class="thumbnail" src="thumbnails/thumbnail-3.webp">
+          </a>
+          <div class="video-time">9:13</div>
+        </div>
+        <div class="video-info-grid">
+          <div class="channel-picture">
+              <img class="profile-picture" src="channel-pictures/channel-3.jpg">
+           
+          </div>
+          <div class="video-info">
+
+            <p class="video-title">
+              <a href="https://www.youtube.com/watch?v=40yq-8uWPDc" target="_blank" class="video-title-link">
+
+              How many SETS per week to build MUSCLE? 
+              </a>
+           </p>
+            <p class="video-author">
+              Max Euceda
+            </p>
+            <p class="video-stats">
+              3.7K views &#183; 1 hour ago
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="video-preview">
+        <div class="thumbnail-row">
+          <a href="https://www.youtube.com/watch?v=5ZawH-aKmLY">
+          <img class="thumbnail" src="thumbnails/thumbnail-4.webp">
+          </a>
+          <div class="video-time">28:25</div>
+        </div>
+        <div class="video-info-grid">
+          <div class="channel-picture">
+            <img class="profile-picture" src="channel-pictures/channel-4.jpg">
+          </div>
+          <div class="video-info">
+            <a href="https://www.youtube.com/watch?v=5ZawH-aKmLY" target="_blank" class="video-title-link">
+            <p class="video-title">
+              2021 McLaren 720S Coupe - POV Driving Review
+            </a>
+            </p>
+            <p class="video-author">
+              TheTopher
+            </p>
+            <p class="video-stats">
+              763K views &#183; 10 months ago
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="video-preview">
+        <div class="thumbnail-row">
+          <a href="https://www.youtube.com/watch?v=-bivaD6uOJ0" target="_blank">
+          <img class="thumbnail" src="thumbnails/thumbnail-5.webp">
+          </a>
+          <div class="video-time">11:17</div>
+        </div>
+        <div class="video-info-grid">
+          <div class="channel-picture">
+            <img class="profile-picture" src="channel-pictures/channel-5.jpg">
+          </div>
+          <div class="video-info">
+            <a href="https://www.youtube.com/watch?v=-bivaD6uOJ0" target="_blank" class="video-title-link">
+            <p class="video-title">
+              The Fastest Hole of Golf | Guinness World Records 2021 | Hero Challenge
+            </p>
+            </a>
+            <p class="video-author">
+              DP World Tour
+            </p>
+            <p class="video-stats">
+              1.1M views &#183; 7 months ago
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="video-preview">
+        <div class="thumbnail-row">
+          <a href="https://www.youtube.com/watch?v=ckmk2i2QPSs&t=483s" target="_blank">
+          <img class="thumbnail" src="thumbnails/thumbnail-6.webp">
+        </a>
+          <div class="video-time">14:56</div>
+        </div>
+        <div class="video-info-grid">
+            <div class="channel-picture">
+              <div class="profile-info">
+              <img class="profile-picture" src="channel-pictures/channel-6.jpg">
+              <div class="channel-tooltip">
+                <img class="channel-tooltip-picture" src="channel-pictures/channel-6.jpg">
+                <div>
+                  <div class="tooltip-author">
+                    CHRIS HERIA
+                  </div>
+                  <div class="subs">
+                    10M subscribers
+                  </div>
+                </div>
+              </div>
+            </div>  
+          </div>
+          <div class="video-info">
+            <a href="https://www.youtube.com/watch?v=ckmk2i2QPSs&t=483s" target="_blank" class="video-title-link">
+            <p class="video-title">
+              Father & Son Try Unhealthy VS Healthy JUNK FOODS (FT.Zen Heria)
+            </p>
+          </a>
+            <p class="video-author">
+              CHRIS HERIA
+            </p>
+            <p class="video-stats">
+              1.1M views &#183; 9 months ago
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

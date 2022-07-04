@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Absolute Position Practice</title>
+
+    <style>
+      body{
+        height: 3000px;
+      }
+
+      .a{
+        color: white;
+        background-color: black;
+        width: 45px;
+        height: 45px;
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        border-radius: 50px;
+        font-size: 20px;
+        font-family: Arial, Helvetica, sans-serif;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+      .b{
+        width: 320px;
+        height: 180px;
+        position: fixed;
+        background-color: gray; 
+        bottom: 10px;
+        right: 10px;
+      }
+
+      .c{
+        color: white;
+        background-color: black;
+        width: 45px;
+        height: 45px;
+        position: absolute;
+        top: -22px;
+        left: -22px;
+        border-radius: 50px;
+        font-size: 20px;
+        font-family: Arial, Helvetica, sans-serif;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+      .time{
+        background-color: black;
+        color: white;
+        position: absolute;
+        bottom: 10px;
+        right: 10px;
+        padding: 6px;
+        font-family: Arial, Helvetica, sans-serif;
+      }
+
+      .product{
+        position: relative;
+        display: inline-block;
+      }
+
+      .sale{
+        background-color: black;
+        color: white;
+        padding-left: 10px;
+        padding-right: 10px;
+        padding-top: 6px;
+        padding-bottom: 6px;
+        display: inline-block;
+        position: absolute;
+        top: 10px;
+        right: 0;
+        font-family: Arial, Helvetica, sans-serif;
+      }
+
+      .img{
+        width: 250px;
+        height: 250px;
+        object-fit: cover;
+      }
+
+      .space{
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        height: 60px;
+        background-color: rgba(255, 255, 255, .8);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+      .buy{
+        background-color: white;
+        font-family: Arial, Helvetica, sans-serif;
+        border-style: solid;
+        border-radius: 0;
+        padding-left: 8px;
+        padding-right: 8px;
+        padding-top: 5px;
+        padding-bottom: 5px;
+
+      }
+    </style>
+  </head>
+
+  <body>
+
+    <div class="a">
+      x
+    </div>
+
+    <div class="b">
+      <div class="c">
+        x
+      </div>
+      <div class="time">
+        0:29
+      </div>
+    </div>
+
+    <div class="product">
+      <img class="img" src="/thumbnails/GUEST_5e9b06ce-0ae5-4945-a4a6-5254fcc6b9b5.jpg">
+      <div class="sale">
+        20&percnt; OFF
+      </div>
+      <div class="space">
+        <button class="buy">
+          Add to Cart
+        </button>
+      </div>
+    </div>
+
+  </body>
+</html>
