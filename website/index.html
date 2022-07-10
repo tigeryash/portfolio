@@ -106,8 +106,46 @@
 
   <canvas id="myCanvas" width="500" height="500"></canvas>
 
+  <div class="timeWrapper">
+    <div id="timeContainer">
+      <div id="timeDisplay">00:00:00:00</div>
+      <button id="startBtn" class="timerBtn">Start</button>
+      <button id="pauseBtn" class="timerBtn">Pause</button>
+      <button id="restartBtn" class="timerBtn">Restart</button>   
+    </div>
+  </div>
 
+  <div class="RPSWrapper">
+    <div id="rpsContainer">
+      <div class="gameText" id="player">Player:</div>
+      <div class="gameText" id="computer">Computer:</div>
+      <div class="gameText" id="result">Result:</div>
+      <button class="gameChoice" id="rock">Rock</button>
+      <button class="gameChoice" id="paper">Paper</button>
+      <button class="gameChoice" id="scissors">Scissors</button>
+    </div>
+  </div>
 
+  <div class="tttWrapper">
+    <div id="gameContainer">
+      <h1>Tic Tac Toe</h1>
+      <div id="cellContainer">
+        <div cellIndex="0" class="cell" ></div>
+        <div cellIndex="1" class="cell" ></div>
+        <div cellIndex="2" class="cell" ></div>
+        <div cellIndex="3" class="cell" ></div>
+        <div cellIndex="4" class="cell" ></div>
+        <div cellIndex="5" class="cell" ></div>
+        <div cellIndex="6" class="cell" ></div>
+        <div cellIndex="7" class="cell" ></div>
+        <div cellIndex="8" class="cell" ></div>
+      </div>
+      <h2 id="statusText"></h2>
+      <button id="restart">Restart</button>
+    </div>
+  </div>
+
+  
   <script type="module" src="index.js"></script>
 
 

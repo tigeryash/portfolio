@@ -1143,7 +1143,7 @@ context.stroke();
 context.fill();
 */
 //draw rectangle
-
+/*
 context.fillStyle = "black";
 context.fillRect(0, 0, 250, 250);
 context.strokeStyle= "black";
@@ -1163,3 +1163,172 @@ context.fillStyle = "blue";
 context.fillRect(250, 0, 500, 250);
 context.strokeStyle= "black";
 context.strokeRect(250, 0, 500, 250);
+*/
+//draw circle
+//(x, y, r, sAngle, eAngle, counterclockwise) starting and ending angles in radians
+/*
+context.fillStyle = "lightblue";
+context.strokeStyle = "darkblue";
+context.lineWidth = 10;
+context.beginPath();
+context.arc(250, 250, 200, 0, 2* Math.PI);
+context.stroke();
+context.fill();
+*/
+//draw text
+context.font = "50px Arial";
+context.fillStyle = "grey";
+context.textAlign = "center"
+context.fillText("YOU WIN!", canvas.width/2, canvas.height/2);
+
+//window interface used to talk to the web browser the DOM is a property of the window
+//console.dir(window); lists window properties 
+//window.innerWidth x pixel of window 
+/* window.innerHeight y pixel of window 
+window.scrollX x scroll position of window
+window.scrollY y scroll position of window 
+
+window.location.href url of window 
+can set it equal to another web page  window.location.href = "https://google.com"
+window.location.hostname name of website 
+window.location.pathname path name 
+
+const myButton = document.querySelctor("#myButton");
+
+myButton.addeventlistener("click", () => window.open("https://google.com"));
+myButton.addeventlistener("click", () => window.close());
+myButton.addeventlistener("click", () => window.print());
+
+window.alert("hello");
+window.confirm("press ok to continue");
+let age = window.prompt("enter age");
+if(age < 18){
+  window.alert("you must be +18");
+  window.close();
+}
+*/
+
+//cookie small text or file saved on comp used to remember info about user saved in name = value pairs
+
+//console.log(navigator.cookieEnabled); checks if cookies enabled 
+/*document.cookie = "firstName=Spongebob; expires=Sun, 1 January 2030 12:00:00 UTC; path=/"
+document.cookie = "lastName=Squarepants; expires=Sun, 1 January 2030 12:00:00 UTC; path=/"
+
+console.log(document.cookie);
+
+*/
+//stopwatch
+const timeDisplay = document.querySelector("#timeDisplay");
+const startBtn = document.querySelector("#startBtn");
+const pauseBtn = document.querySelector("#pauseBtn");
+const restartBtn = document.querySelector("#restartBtn");
+
+let startTime = 0;
+let elapsedTime = 0;
+let currentTime = 0;
+let paused = true;
+let intervalId;
+let hrs = 0;
+let mins = 0;
+let sec = 0;
+let ms = 0;
+
+startBtn.addEventListener("click", () => {
+  if(paused){
+    paused = false;
+    startTime = Date.now()/*current time in ms*/ - elapsedTime;
+    intervalId = setInterval(updateTime, 75);
+  }
+});
+pauseBtn.addEventListener("click", () =>{
+  if(!paused){
+    paused = true;
+    elapsedTime = Date.now() - startTime;
+    clearInterval(intervalId);
+  }
+});
+restartBtn.addEventListener("click", () => {
+  paused = true;
+  clearInterval(intervalId);
+   startTime = 0;
+   elapsedTime = 0;
+   currentTime = 0;
+   sec = 0;
+   hrs = 0;
+   mins = 0;
+   ms = 0;
+  timeDisplay.textContent = "00:00:00:00";
+});
+
+function updateTime(){
+  elapsedTime = Date.now() - startTime;
+
+  ms = Math.floor(elapsedTime /100) % 10;
+  sec = Math.floor(elapsedTime /1000) % 60;
+  mins = Math.floor(elapsedTime /(1000 * 60)) % 60;
+  hrs = Math.floor(elapsedTime /(1000 * 60 *60)) % 60;
+
+  
+  ms = pad(ms)
+  sec = pad(sec);
+  mins = pad(mins);
+  hrs = pad(hrs);
+
+  timeDisplay.textContent = `${hrs}:${mins}:${sec}:${ms}`;
+
+  function pad(unit){
+    return (("0") + unit).length > 2 ? unit : "0" + unit;
+  }
+
+}
+
+//rock paper scissors
+const playerText = document.querySelector("#player");
+const computerText = document.querySelector("#computer");
+const resultText = document.querySelector("#result");
+const choiceBtns = document.querySelectorAll(".gameChoice");
+let player;
+let computer;
+let result;
+
+choiceBtns.forEach(button => button.addEventListener("click", () => {
+  player = button.textContent;
+  computerTurn();
+  playerText.textContent = `Player: ${player}`;
+  computerText.textContent = `Computer: ${computer}`
+  resultText.textContent = checkWinner();
+}));
+
+function computerTurn(){
+  let num = Math.floor(Math.random() * 3) + 1;
+
+  switch(num){
+    case 1: 
+      computer = "Rock";
+      break;
+    case 2: 
+      computer = "Paper";
+      break;
+    case 3: 
+      computer = "Scissors";
+      break;
+  }
+}; 
+
+function checkWinner(){
+  if(player == computer){
+    return "Draw";
+  }
+  else if(computer == "Rock"){
+    return (player == "Paper") ? "You Win" :"You Lose";
+  }
+  else if(computer == "Paper"){
+    return (player == "Scissors") ? "You Win" :"You Lose";
+  }
+  else if(computer == "Scissors"){
+    return (player == "Rock") ? "You Win" :"You Lose";
+  }
+}
+
+//tictactoe
+const cells = document.quarySelectAll(".cell");
